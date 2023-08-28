@@ -18,7 +18,7 @@ RUN ./mvnw clean compile
 FROM adoptopenjdk:11-jre-hotspot
 
 # Copy the built jar file from the build image
-COPY --from=build /app/target/quarkus-app-1.0.0-SNAPSHOT-runner.jar /app/app.jar
+
 
 # Set the startup command
 CMD ["java", "-jar", "/app/target/quarkus-app/quarkus-run.jar"]
