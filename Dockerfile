@@ -12,7 +12,7 @@ RUN git clone https://github.com/sharathsin/quarkus-petclinic.git /app
 WORKDIR /app
 
 # Build the project with Maven Wrapper (./mvnw)
-RUN ./mvnw clean compile quarkus:prod
+RUN ./mvnw clean compile
 
 # Use a smaller base image for the runtime
 FROM adoptopenjdk:11-jre-hotspot
